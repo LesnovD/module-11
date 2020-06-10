@@ -1,0 +1,109 @@
+.team{
+   padding-bottom: 84px;
+}
+.team-text{
+   font-size: 15px;
+   font-family: "Roboto";
+   color: rgb(153, 153, 153);
+   line-height: 1.6; 
+   margin: 0 auto;
+   text-align: center;
+   width: 940px;
+   margin-bottom: 90px;
+}
+.team-list{
+   display: flex;
+   justify-content: space-between;
+   
+   &__item{
+   width: 380px;
+   
+   &:hover{
+    .overlay{
+      visibility: visible;
+      opacity: 1;
+      transform: translate(-10px,-10px);
+      box-shadow: 10px 10px 0 rgb(149, 225, 211);
+    }
+    .team-list__item-image{
+       transform: translate(-10px,-10px);
+    }
+   }
+   }
+   
+   &__item-name{
+      font-size: 14px;
+      font-family: "Montserrat";
+      color: rgb(51, 51, 51);
+      text-transform: uppercase;
+      line-height: 1.2;
+      text-align: center;
+      margin-bottom: 14px;
+   }
+   
+   &__item-text{
+     font-size: 15px;
+     font-family: "Roboto";
+     color: rgb(153, 153, 153);
+     font-style: italic;
+     line-height: 1.6;
+     text-align: center;
+   }
+   
+   &__item-image-wraper{
+   position: relative;
+   margin-bottom: 30px; 
+   }
+   
+   &__item-image{
+   transition-property: transform;
+   transition-duration: 1s;
+   transition-timing-function: linear; 
+   }
+}
+.overlay {
+   background-image: linear-gradient( 90deg, rgba(252,227,138,0.9) 0%, rgba(243,129,129,0.9) 100%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+.overlay-list {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   top: 207px;
+   display: flex;
+   
+   &__link{
+   display: block;
+   background-color: rgb(252, 227, 138);
+   width: 56px;
+   height: 56px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition-property: background-color;
+   transition-duration: 0.5s;
+   transition-timing-function: linear; 
+   }
+   
+   &__link-svg{
+   width: 26px;
+   height: 22px;
+   fill: rgb(243, 129, 129); 
+   }
+   
+   &__item :hover{
+    background-color:rgb(243, 129, 129);
+    .overlay-list__link-svg{
+     fill: #ffffff; 
+    }
+   }
+} 
